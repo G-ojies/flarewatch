@@ -1,0 +1,366 @@
+{
+  "address": "9fWTsjzHwtY3rvai9Mdsz1gidXq2H4oGBunjnwVcSu9U",
+  "metadata": {
+    "name": "flarewatch",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "docs": [
+    "Flarewatch: a write-once ledger for satellite gas-flare observations.",
+    "",
+    "Every night NASA's VIIRS sensors see the Niger Delta's gas flares. The",
+    "off-chain pipeline turns one UTC day of detections into a canonical JSON",
+    "file and records its SHA-256 here. A day can be recorded exactly once:",
+    "there is no update or close instruction, so a published day can never be",
+    "quietly revised. Anyone can hash the public file and compare."
+  ],
+  "instructions": [
+    {
+      "name": "initialize",
+      "docs": [
+        "Create the registry. `method_digest` is the SHA-256 of the detection",
+        "method document, fixed for the life of the registry."
+      ],
+      "discriminator": [
+        175,
+        175,
+        109,
+        31,
+        13,
+        152,
+        155,
+        237
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "registry",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "method_digest",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "record_day",
+      "docs": [
+        "Record one UTC day (`day` as YYYYMMDD). Fails if the day already exists."
+      ],
+      "discriminator": [
+        21,
+        69,
+        138,
+        56,
+        95,
+        139,
+        121,
+        204
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "registry"
+          ]
+        },
+        {
+          "name": "registry",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  101,
+                  103,
+                  105,
+                  115,
+                  116,
+                  114,
+                  121
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "day_record",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  100,
+                  97,
+                  121
+                ]
+              },
+              {
+                "kind": "arg",
+                "path": "day"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "day",
+          "type": "u32"
+        },
+        {
+          "name": "digest",
+          "type": {
+            "array": [
+              "u8",
+              32
+            ]
+          }
+        },
+        {
+          "name": "flare_sites",
+          "type": "u16"
+        },
+        {
+          "name": "detections",
+          "type": "u32"
+        },
+        {
+          "name": "total_frp_kw",
+          "type": "u64"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "DayRecord",
+      "discriminator": [
+        225,
+        207,
+        117,
+        226,
+        181,
+        97,
+        22,
+        93
+      ]
+    },
+    {
+      "name": "Registry",
+      "discriminator": [
+        47,
+        174,
+        110,
+        246,
+        184,
+        182,
+        252,
+        218
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "DayRecorded",
+      "discriminator": [
+        65,
+        62,
+        166,
+        104,
+        108,
+        221,
+        163,
+        182
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "Unauthorized",
+      "msg": "Only the registry authority can record days"
+    },
+    {
+      "code": 6001,
+      "name": "InvalidDay",
+      "msg": "Day must be a real calendar date as YYYYMMDD"
+    },
+    {
+      "code": 6002,
+      "name": "FutureDay",
+      "msg": "Day has not started yet"
+    },
+    {
+      "code": 6003,
+      "name": "EmptyDigest",
+      "msg": "Digest must not be all zeros"
+    },
+    {
+      "code": 6004,
+      "name": "InconsistentCounts",
+      "msg": "Flare sites cannot exceed detections"
+    },
+    {
+      "code": 6005,
+      "name": "Overflow",
+      "msg": "Counter overflow"
+    }
+  ],
+  "types": [
+    {
+      "name": "DayRecord",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "day",
+            "type": "u32"
+          },
+          {
+            "name": "digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "flare_sites",
+            "type": "u16"
+          },
+          {
+            "name": "detections",
+            "type": "u32"
+          },
+          {
+            "name": "total_frp_kw",
+            "type": "u64"
+          },
+          {
+            "name": "recorded_at",
+            "type": "i64"
+          },
+          {
+            "name": "recorder",
+            "type": "pubkey"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DayRecorded",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "day",
+            "type": "u32"
+          },
+          {
+            "name": "digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "flare_sites",
+            "type": "u16"
+          },
+          {
+            "name": "detections",
+            "type": "u32"
+          },
+          {
+            "name": "total_frp_kw",
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Registry",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "method_digest",
+            "type": {
+              "array": [
+                "u8",
+                32
+              ]
+            }
+          },
+          {
+            "name": "days_recorded",
+            "type": "u32"
+          },
+          {
+            "name": "latest_day",
+            "type": "u32"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    }
+  ]
+}

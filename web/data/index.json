@@ -1,0 +1,88 @@
+{
+ "generated": "2026-10-21T14:14:15.059Z",
+ "method": "flarewatch-method-v1",
+ "programId": "9fWTsjzHwtY3rvai9Mdsz1gidXq2H4oGBunjnwVcSu9U",
+ "registry": "Bv2gQoRWHEonXQbVgfH5uudqBh3oU1xXiJU1HdYKHYd1",
+ "methodSha256": "9a5577930829fed066e36c0fbf86faf5c74f5b2c53f82fd3d1d0f60554487a88",
+ "cluster": "devnet",
+ "totals": {
+  "days": 6,
+  "sites": 91,
+  "flares": 48,
+  "detections": 675
+ },
+ "days": [
+  {
+   "day": "2026-10-15",
+   "file": "days/2026-10-15.json",
+   "sha256": "5d42f1da8a11e2bb40b03d7c19d376e54efac42fe9b571ef2c51f324d1d058bf",
+   "flareSites": 23,
+   "detections": 50,
+   "totalFrpKw": 150020,
+   "anchor": {
+    "account": "H3aEE6mA8N1cUSbKt9DWmtt5d9HDqqCCo1sydkCb3m7f",
+    "tx": "58N7RxMNn565DnJqNzXy4CAP6k9iLB3adCuaM4ncd8LTPHogj8FkRzH7spjYr1B48jRzyK4AGbUQpYnwh7CAWb4T"
+   }
+  },
+  {
+   "day": "2026-10-16",
+   "file": "days/2026-10-16.json",
+   "sha256": "b582eba92bb375cb400050ad773b5e42b2e705c516e4a6c7e8f996e5a62099b8",
+   "flareSites": 52,
+   "detections": 150,
+   "totalFrpKw": 342080,
+   "anchor": {
+    "account": "FvGqCwabEFJwjwFzzhSrp9CTDhUid3bGMY9PnsSGDFyh",
+    "tx": "5WW7K5K5rAZtgMKJc3nbkyB341YvSc8VLD2bmT8kMzTVK8AtNXEEnksTK2vzDEWfqavMZSpxPw4bHWZ4mjKqfmvi"
+   }
+  },
+  {
+   "day": "2026-10-17",
+   "file": "days/2026-10-17.json",
+   "sha256": "4d49badcb9dba6210d2b79ed5b016c403cd916b04e072302b14cf8064687966e",
+   "flareSites": 62,
+   "detections": 174,
+   "totalFrpKw": 377150,
+   "anchor": {
+    "account": "61XBpZWmfUenV87WEVyNq5uDQLqiDbmvbEskxk3BHnnd",
+    "tx": "2yYLxgwj5Zf5tkZh1HAKkP1m3L7tYFLfqH8dAskEEC6GmebigNFwAbRmTMPMMGjeADUuoREgvPNCaqCYzQfweGpU"
+   }
+  },
+  {
+   "day": "2026-10-18",
+   "file": "days/2026-10-18.json",
+   "sha256": "4e5e9f189a6a26e3fa6aa6a3bed28589c8d1897154c4a19b1cfdd46ef2f3d8d8",
+   "flareSites": 56,
+   "detections": 166,
+   "totalFrpKw": 489740,
+   "anchor": {
+    "account": "FQiR97kDKx8MARx1wHnRwMWN2AuzoDrSuQ7bVACVXx8h",
+    "tx": "5oTaSFz2g5m59e16anEsaDUAyeYFEWeF7WhHAoGWJDLdVozzkyKRZikpmv9acHNNrkVAerFmh7XXADxHpsCHKZkY"
+   }
+  },
+  {
+   "day": "2026-10-19",
+   "file": "days/2026-10-19.json",
+   "sha256": "b6b2b72f44b3b137aa582ef89fecbf92f0da65f9f352c7e2bd9b93a52fd16431",
+   "flareSites": 48,
+   "detections": 112,
+   "totalFrpKw": 222460,
+   "anchor": {
+    "account": "GqfeH1JJoKQfrTw8jVMH6CSNBmi2ZHJEaZXXntPbnLby",
+    "tx": "3npg3wbFND8nwnbszdrepNhMgiV2hdeZCvBthouGtjqiKAHmTQormsvTvDqAhBcdo5aR6cGchNB6c4sRCxecfcWG"
+   }
+  },
+  {
+   "day": "2026-10-20",
+   "file": "days/2026-10-20.json",
+   "sha256": "a5cf0ae70971111c38f49e1c3a84710356721c00e65bf61d9021bbb73bee8539",
+   "flareSites": 10,
+   "detections": 23,
+   "totalFrpKw": 41180,
+   "anchor": {
+    "account": "8uJa7NL9xXxsbMe4GMnYo4cGwtxBZDpfmjiFazb999Sj",
+    "tx": "4mi6b873roEDhNw5soamhF2eZesvz41HzpsLh5LegGfFcrt71rfFTBs9QiUCPKHPyL1ojsAA6zEuWKtiTKYpNfVz"
+   }
+  }
+ ]
+}

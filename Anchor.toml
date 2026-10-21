@@ -1,0 +1,19 @@
+[toolchain]
+package_manager = "npm"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+flarewatch = "9fWTsjzHwtY3rvai9Mdsz1gidXq2H4oGBunjnwVcSu9U"
+
+[programs.devnet]
+flarewatch = "9fWTsjzHwtY3rvai9Mdsz1gidXq2H4oGBunjnwVcSu9U"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "cargo test"

@@ -1,0 +1,39 @@
+name: daily
+
+on:
+  schedule:
+    - cron: '30 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      FLAREWATCH_SECRET: ${{ secrets.FLAREWATCH_SECRET }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: node pipeline/fetch.mjs
+      - run: node pipeline/derive.mjs
+      - run: node pipeline/places.mjs
+      - name: Record new nights on Solana
+        if: ${{ env.FLAREWATCH_SECRET != '' }}
+        run: node pipeline/anchor.mjs
+      - run: node pipeline/derive.mjs
+      - run: node pipeline/brief.mjs
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      - run: cp METHOD.md web/METHOD.md
+      - name: Commit
+        run: |
+          git config user.name "flarewatch-bot"
+          git config user.email "flarewatch-bot@users.noreply.github.com"
+          git add web/data web/METHOD.md
+          git diff --cached --quiet || git commit -m "Record night data $(date -u +%F)"
+          git push

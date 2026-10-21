@@ -1,0 +1,16 @@
+{
+  "name": "flarewatch",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fetch": "node pipeline/fetch.mjs",
+    "derive": "node pipeline/derive.mjs",
+    "places": "node pipeline/places.mjs",
+    "anchor": "node pipeline/anchor.mjs",
+    "brief": "node pipeline/brief.mjs",
+    "daily": "node pipeline/fetch.mjs && node pipeline/derive.mjs && node pipeline/places.mjs && node pipeline/anchor.mjs && node pipeline/derive.mjs && node pipeline/brief.mjs && cp METHOD.md web/METHOD.md"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.98.4"
+  }
+}

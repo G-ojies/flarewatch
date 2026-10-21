@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flarewatch: Niger Delta gas flares, seen from space</title>
+  <meta name="description" content="Every night NASA satellites see the Niger Delta's gas flares. Flarewatch maps them and records each night's observations on Solana, so the record cannot be quietly edited.">
+  <meta property="og:title" content="Flarewatch">
+  <meta property="og:description" content="Niger Delta gas flares, seen from space every night, on a record nobody can quietly edit.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c1 3.5 5 5.6 5 10.2A5 5 0 0 1 7 12.5c0-1.9.9-3.3 2-4.4.1 1.6.9 2.7 2 3.2C11 8 11.3 5 12 2Z"/></svg>
+      Flarewatch
+    </a>
+    <nav>
+      <a href="#map">Map</a>
+      <a href="#flares">Flares</a>
+      <a href="#ledger">Ledger</a>
+      <a href="#method">Method</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Niger Delta · NASA VIIRS · Solana</p>
+      <h1>The flares burn every night.<br>Now the record can't be erased.</h1>
+      <p class="lede">Satellites pass over the Niger Delta several times a night and see every gas flare by its heat. Flarewatch maps them and fixes each night's observations on Solana, so no company, agency or later edit can quietly change what was seen.</p>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <section class="brief card" id="brief">
+      <div class="brief-head"><span class="badge">AI brief</span><span class="muted" id="brief-src"></span></div>
+      <p id="brief-text">Loading…</p>
+    </section>
+
+    <section id="map-wrap">
+      <div class="section-head">
+        <h2 id="map">Map</h2>
+        <div class="legend"><span><i class="dot flare"></i>Persistent flare</span><span><i class="dot transient"></i>Other hotspot</span><span class="muted">Size = mean heat (FRP)</span></div>
+      </div>
+      <div id="leaflet"></div>
+    </section>
+
+    <section class="split">
+      <div class="card">
+        <h3>Flares by state</h3>
+        <div id="states"></div>
+      </div>
+      <div class="card">
+        <h3>Detections per night</h3>
+        <div id="nightly"></div>
+        <p class="muted small">Low nights are usually cloud, not quiet flares. Every satellite pass is checked.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2 id="flares">Persistent flares</h2>
+        <label class="filter">State <select id="state-filter"><option value="">All</option></select></label>
+      </div>
+      <div class="table-wrap">
+        <table class="flares">
+          <thead><tr><th>Place</th><th>Nights seen</th><th class="num">Mean FRP</th><th class="num">Peak FRP</th><th>Position</th></tr></thead>
+          <tbody id="flare-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2 id="ledger">Ledger</h2>
+        <button class="btn" id="verify-all">Verify every day</button>
+      </div>
+      <p class="muted">Each row is one night of raw NASA detections. Verifying downloads the file, hashes it in your browser and compares that hash with the one stored on Solana when the night was recorded. Nothing here trusts this website.</p>
+      <div class="table-wrap">
+        <table class="ledger">
+          <thead><tr><th>Night (UTC)</th><th class="num">Detections</th><th class="num">Sites</th><th>SHA-256</th><th>On chain</th><th>Check</th></tr></thead>
+          <tbody id="ledger-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card method" id="method">
+      <h2>Method</h2>
+      <ol>
+        <li><b>Source.</b> NASA FIRMS near-real-time detections from three VIIRS instruments (Suomi NPP, NOAA-20, NOAA-21), 375 m resolution.</li>
+        <li><b>Filter.</b> Night passes only, inside 3.8 to 7.0 N and 4.5 to 9.0 E. Flares burn all night; farm fires mostly burn by day.</li>
+        <li><b>Record.</b> Each complete night becomes a file of the untouched detections. Its SHA-256 goes into a Solana program that can write a night once and never again.</li>
+        <li><b>Classify.</b> Detections within 1 km form a site. A site seen on 3 or more nights within 7 days is a persistent flare.</li>
+        <li><b>Honest numbers.</b> FRP is the heat the sensor sees, in megawatts. It is not turned into gas volume or CO2, because that needs a calibration this project does not claim.</li>
+      </ol>
+      <p>The full method is <a href="METHOD.md">METHOD.md</a>. Its hash is fixed in the registry account, so the rules can't change without a new registry. <button class="btn small" id="verify-method">Verify the method</button> <span id="method-result"></span></p>
+      <p class="muted small" id="chain-ids"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Data: <a href="https://firms.modaps.eosdis.nasa.gov/">NASA FIRMS</a> (VIIRS 375 m NRT). Place names: <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors. Basemap: Esri.</p>
+    <p>Built in Benin City for the IEEE ClimateChain Global Hackathon. <a href="https://github.com/G-ojies/flarewatch">Source on GitHub</a>.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

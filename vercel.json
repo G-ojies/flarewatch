@@ -1,0 +1,8 @@
+{
+  "buildCommand": "",
+  "installCommand": "echo skip",
+  "outputDirectory": "web",
+  "headers": [
+    { "source": "/data/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=300" }] }
+  ]
+}
