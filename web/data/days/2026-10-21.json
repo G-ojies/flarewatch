@@ -1,0 +1,1 @@
+{"day":"2026-10-21","method":"flarewatch-method-v1","box":{"latMin":3.8,"latMax":7,"lonMin":4.5,"lonMax":9},"columns":["latitude","longitude","frp","bright_ti4","acq_time","satellite","confidence"],"detections":[]}
