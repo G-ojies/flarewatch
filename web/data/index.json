@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-22T12:16:56.016Z",
+ "generated": "2026-10-22T12:28:09.932Z",
  "method": "flarewatch-method-v1",
  "programId": "9fWTsjzHwtY3rvai9Mdsz1gidXq2H4oGBunjnwVcSu9U",
  "registry": "Bv2gQoRWHEonXQbVgfH5uudqBh3oU1xXiJU1HdYKHYd1",
@@ -91,7 +91,10 @@
    "flareSites": 0,
    "detections": 0,
    "totalFrpKw": 0,
-   "anchor": null
+   "anchor": {
+    "account": "43QkJhotCBzGAA2xLamSyvU9rq7eqpcD3mkP1C7iqVCi",
+    "tx": "4qvvB4Dp4ShJCB11vGCziKBujtidXCALpFEERfPxgLoz5n8Gh2EYoeLYVZkbf5kY3kKgVBBVRARBWZMYnLaki4S1"
+   }
   }
  ]
 }
