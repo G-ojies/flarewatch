@@ -9,7 +9,7 @@
 **Links**
 - Live demo: https://flarewatch-ng.vercel.app
 - Code: https://github.com/G-ojies/flarewatch
-- Video: (YouTube link)
+- Video: https://youtu.be/aIjtqPHqlmc
 - Solana program (devnet): https://explorer.solana.com/address/9fWTsjzHwtY3rvai9Mdsz1gidXq2H4oGBunjnwVcSu9U?cluster=devnet
 
 **Built with:** solana, anchor, rust, javascript, node.js, nasa-firms, viirs, leaflet, openstreetmap, groq, gpt-oss, vercel, github-actions
