@@ -1,7 +1,7 @@
 {
- "generated": "2026-10-23T08:14:14.511Z",
- "text": "From 15 Oct to 22 Oct 2026, satellite passes recorded 51 persistent gas flares (seen on 3 or more nights within 7 days) and 41 other hotspot sites seen too rarely to count as flares. The flares were concentrated in Rivers (20), Delta (15) and Bayelsa (6). The two hottest persistent flares were Eastern Obolo in Akwa Ibom with an average FRP of 5.42 MW (seen on 4 nights) and Warri South‑West in Delta with an average FRP of 4.69 MW (seen on 6 nights). On the latest night, 22 Oct, 17 detections occurred at 16 hotspot sites, but clouds can hide flares on any night.",
- "source": "AI (openai/gpt-oss-120b, Groq), checked against the facts",
+ "generated": "2026-10-23T11:58:13.103Z",
+ "text": "Over 8 nights (2026-10-15 to 2026-10-22), satellites found 51 gas flares burning persistently across the Niger Delta. Rivers has 20, Delta has 15, Bayelsa has 6. The strongest is in Eastern Obolo, Akwa Ibom, averaging 5.42 MW of radiant heat.",
+ "source": "template",
  "facts": {
   "period": "2026-10-15 to 2026-10-22",
   "nightsCovered": 8,
