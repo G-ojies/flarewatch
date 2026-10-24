@@ -366,5 +366,41 @@
  "5.54N 5.19E": {
   "state": "Delta",
   "area": "Warri South-West"
+ },
+ "5.92N 5.31E": {
+  "state": "Delta",
+  "area": "Warri North"
+ },
+ "5.44N 5.88E": {
+  "state": "Delta",
+  "area": "Ughelli South"
+ },
+ "5.90N 5.58E": {
+  "state": "Delta",
+  "area": "Sapele"
+ },
+ "5.60N 5.45E": {
+  "state": "Delta",
+  "area": "Warri South-West"
+ },
+ "5.15N 6.86E": {
+  "state": "Rivers",
+  "area": "Ikwerre"
+ },
+ "4.42N 8.42E": {
+  "state": "Southwest",
+  "area": "Ndian"
+ },
+ "4.53N 6.63E": {
+  "state": "Rivers",
+  "area": "Akuku Toru"
+ },
+ "4.64N 7.87E": {
+  "state": "Akwa Ibom",
+  "area": "Onna"
+ },
+ "4.18N 8.41E": {
+  "state": "Offshore or coast",
+  "area": null
  }
 }
