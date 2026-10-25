@@ -402,5 +402,45 @@
  "4.18N 8.41E": {
   "state": "Offshore or coast",
   "area": null
+ },
+ "4.55N 7.05E": {
+  "state": "Rivers",
+  "area": "Degema"
+ },
+ "5.46N 6.69E": {
+  "state": "Rivers",
+  "area": "Ogba/Egbema/Ndoni"
+ },
+ "4.93N 7.02E": {
+  "state": "Rivers",
+  "area": "Obio/Akpor"
+ },
+ "4.69N 7.09E": {
+  "state": "Rivers",
+  "area": "Okrika"
+ },
+ "4.28N 8.56E": {
+  "state": "Offshore or coast",
+  "area": null
+ },
+ "5.63N 6.67E": {
+  "state": "Imo",
+  "area": "Oguta"
+ },
+ "4.18N 8.40E": {
+  "state": "Offshore or coast",
+  "area": null
+ },
+ "5.33N 6.24E": {
+  "state": "Delta",
+  "area": "Isoko South"
+ },
+ "4.44N 6.36E": {
+  "state": "Bayelsa",
+  "area": "Nembe"
+ },
+ "5.53N 5.54E": {
+  "state": "Delta",
+  "area": "Warri South-West"
  }
 }
