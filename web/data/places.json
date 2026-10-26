@@ -442,5 +442,65 @@
  "5.53N 5.54E": {
   "state": "Delta",
   "area": "Warri South-West"
+ },
+ "5.52N 5.47E": {
+  "state": "Delta",
+  "area": "Warri South-West"
+ },
+ "4.30N 7.66E": {
+  "state": "Offshore or coast",
+  "area": null
+ },
+ "5.68N 6.59E": {
+  "state": "Delta",
+  "area": "Ndokwa East"
+ },
+ "5.42N 5.32E": {
+  "state": "Delta",
+  "area": "Burutu"
+ },
+ "6.73N 4.71E": {
+  "state": "Ondo",
+  "area": "Odigbo"
+ },
+ "5.02N 6.36E": {
+  "state": "Bayelsa",
+  "area": "Yenegoa"
+ },
+ "5.60N 5.46E": {
+  "state": "Delta",
+  "area": "Warri South-West"
+ },
+ "5.43N 5.14E": {
+  "state": "Offshore or coast",
+  "area": null
+ },
+ "4.55N 6.99E": {
+  "state": "Rivers",
+  "area": "Degema"
+ },
+ "5.33N 5.21E": {
+  "state": "Offshore or coast",
+  "area": null
+ },
+ "4.98N 7.10E": {
+  "state": "Rivers",
+  "area": "Etche"
+ },
+ "4.98N 7.17E": {
+  "state": "Rivers",
+  "area": "Etche"
+ },
+ "6.73N 4.55E": {
+  "state": "Ondo",
+  "area": "Odigbo"
+ },
+ "5.31N 6.84E": {
+  "state": "Imo",
+  "area": "Ohaji/Egbema"
+ },
+ "4.45N 6.28E": {
+  "state": "Bayelsa",
+  "area": "Nembe"
  }
 }
