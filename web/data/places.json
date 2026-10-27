@@ -502,5 +502,33 @@
  "4.45N 6.28E": {
   "state": "Bayelsa",
   "area": "Nembe"
+ },
+ "4.14N 7.52E": {
+  "state": "Offshore or coast",
+  "area": null
+ },
+ "4.42N 7.16E": {
+  "state": "Rivers",
+  "area": "Bonny"
+ },
+ "4.89N 7.12E": {
+  "state": "Rivers",
+  "area": "Obio/Akpor"
+ },
+ "4.29N 8.17E": {
+  "state": "Offshore or coast",
+  "area": null
+ },
+ "4.22N 8.38E": {
+  "state": "Offshore or coast",
+  "area": null
+ },
+ "5.76N 5.52E": {
+  "state": "Delta",
+  "area": "Warri South"
+ },
+ "5.57N 6.30E": {
+  "state": "Delta",
+  "area": "Isoko North"
  }
 }

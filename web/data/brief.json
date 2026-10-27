@@ -1,44 +1,45 @@
 {
- "generated": "2026-10-26T13:28:29.529Z",
- "text": "Over 11 nights (2026-10-15 to 2026-10-25), satellites found 67 gas flares burning persistently across the Niger Delta. Rivers has 23, Delta has 21, Bayelsa has 7. The strongest is in Offshore or coast, averaging 6.49 MW of radiant heat.",
+ "generated": "2026-10-27T12:36:18.677Z",
+ "text": "Over 12 nights (2026-10-15 to 2026-10-26), satellites found 75 gas flares burning persistently across the Niger Delta. Delta has 24, Rivers has 23, Offshore or coast has 9. The strongest is in Offshore or coast, averaging 6.39 MW of radiant heat.",
  "source": "template",
  "facts": {
-  "period": "2026-10-15 to 2026-10-25",
-  "nightsCovered": 11,
-  "persistentFlares": 67,
-  "otherHotspotSites": 43,
+  "period": "2026-10-15 to 2026-10-26",
+  "nightsCovered": 12,
+  "persistentFlares": 75,
+  "otherHotspotSites": 40,
   "flaresByState": {
+   "Delta": 24,
    "Rivers": 23,
-   "Delta": 21,
-   "Bayelsa": 7,
-   "Offshore or coast": 7,
+   "Offshore or coast": 9,
+   "Bayelsa": 8,
    "Edo": 4,
+   "Imo": 3,
    "Akwa Ibom": 2,
-   "Imo": 2,
-   "Anambra": 1
+   "Anambra": 1,
+   "Ondo": 1
   },
   "flaresSeenOnEveryNight": 0,
   "hottestFlares": [
    {
     "where": "Offshore or coast",
-    "meanFrpMW": 6.49,
-    "nightsActive": 6
-   },
-   {
-    "where": "Eastern Obolo, Akwa Ibom",
-    "meanFrpMW": 5.58,
-    "nightsActive": 6
+    "meanFrpMW": 6.39,
+    "nightsActive": 7
    },
    {
     "where": "Warri South-West, Delta",
-    "meanFrpMW": 5.11,
-    "nightsActive": 9
+    "meanFrpMW": 5.34,
+    "nightsActive": 10
+   },
+   {
+    "where": "Eastern Obolo, Akwa Ibom",
+    "meanFrpMW": 5.14,
+    "nightsActive": 7
    }
   ],
   "latestNight": {
-   "day": "2026-10-25",
-   "detections": 186,
-   "hotspotSitesSeen": 81
+   "day": "2026-10-26",
+   "detections": 212,
+   "hotspotSitesSeen": 83
   }
  }
 }
