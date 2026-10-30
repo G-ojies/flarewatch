@@ -538,5 +538,25 @@
  "5.45N 5.88E": {
   "state": "Delta",
   "area": "Udu"
+ },
+ "5.66N 6.51E": {
+  "state": "Delta",
+  "area": "Ndokwa East"
+ },
+ "4.55N 4.62E": {
+  "state": "Offshore or coast",
+  "area": null
+ },
+ "4.45N 6.32E": {
+  "state": "Bayelsa",
+  "area": "Nembe"
+ },
+ "5.36N 5.33E": {
+  "state": "Delta",
+  "area": "Burutu"
+ },
+ "5.00N 5.69E": {
+  "state": "Bayelsa",
+  "area": "Ekeremor"
  }
 }

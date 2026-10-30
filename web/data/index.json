@@ -1,15 +1,15 @@
 {
- "generated": "2026-10-29T13:34:38.506Z",
+ "generated": "2026-10-30T13:24:30.341Z",
  "method": "flarewatch-method-v1",
  "programId": "9fWTsjzHwtY3rvai9Mdsz1gidXq2H4oGBunjnwVcSu9U",
  "registry": "Bv2gQoRWHEonXQbVgfH5uudqBh3oU1xXiJU1HdYKHYd1",
  "methodSha256": "9a5577930829fed066e36c0fbf86faf5c74f5b2c53f82fd3d1d0f60554487a88",
  "cluster": "devnet",
  "totals": {
-  "days": 14,
-  "sites": 117,
-  "flares": 83,
-  "detections": 1631
+  "days": 15,
+  "sites": 120,
+  "flares": 87,
+  "detections": 1863
  },
  "days": [
   {
@@ -160,6 +160,15 @@
    "flareSites": 69,
    "detections": 176,
    "totalFrpKw": 609320,
+   "anchor": null
+  },
+  {
+   "day": "2026-10-29",
+   "file": "days/2026-10-29.json",
+   "sha256": "0b018ebf48af67c397893b7b4d4f165221f24ab44a50788879acb4964fc4cd24",
+   "flareSites": 66,
+   "detections": 232,
+   "totalFrpKw": 736910,
    "anchor": null
   }
  ]
