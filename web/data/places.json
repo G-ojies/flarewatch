@@ -558,5 +558,17 @@
  "5.00N 5.69E": {
   "state": "Bayelsa",
   "area": "Ekeremor"
+ },
+ "5.62N 5.20E": {
+  "state": "Delta",
+  "area": "Warri South-West"
+ },
+ "5.43N 5.27E": {
+  "state": "Delta",
+  "area": "Burutu"
+ },
+ "5.58N 5.77E": {
+  "state": "Delta",
+  "area": "Uvwie"
  }
 }
