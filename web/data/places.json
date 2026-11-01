@@ -570,5 +570,13 @@
  "5.58N 5.77E": {
   "state": "Delta",
   "area": "Uvwie"
+ },
+ "4.31N 8.60E": {
+  "state": "Southwest",
+  "area": "Ndian"
+ },
+ "4.55N 6.67E": {
+  "state": "Rivers",
+  "area": "Akuku Toru"
  }
 }
