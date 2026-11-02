@@ -578,5 +578,21 @@
  "4.55N 6.67E": {
   "state": "Rivers",
   "area": "Akuku Toru"
+ },
+ "6.01N 5.86E": {
+  "state": "Edo",
+  "area": "Orhionmwon"
+ },
+ "4.27N 8.34E": {
+  "state": "Offshore or coast",
+  "area": null
+ },
+ "4.32N 8.37E": {
+  "state": "Offshore or coast",
+  "area": null
+ },
+ "5.55N 6.01E": {
+  "state": "Delta",
+  "area": "Ughelli North"
  }
 }
