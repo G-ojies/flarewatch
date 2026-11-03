@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-02T16:29:11.569Z",
- "text": "Over 18 nights (2026-10-15 to 2026-11-01), satellites found 89 gas flares burning persistently across the Niger Delta. Rivers has 26, Delta has 25, Offshore or coast has 12. The strongest is in Obio/Akpor, Rivers, averaging 9.07 MW of radiant heat.",
+ "generated": "2026-11-03T14:34:35.115Z",
+ "text": "Over 19 nights (2026-10-15 to 2026-11-02), satellites found 89 gas flares burning persistently across the Niger Delta. Rivers has 26, Delta has 25, Offshore or coast has 12. The strongest is in Obio/Akpor, Rivers, averaging 9.07 MW of radiant heat.",
  "source": "template",
  "facts": {
-  "period": "2026-10-15 to 2026-11-01",
-  "nightsCovered": 18,
+  "period": "2026-10-15 to 2026-11-02",
+  "nightsCovered": 19,
   "persistentFlares": 89,
   "otherHotspotSites": 38,
   "flaresByState": {
@@ -38,9 +38,9 @@
    }
   ],
   "latestNight": {
-   "day": "2026-11-01",
-   "detections": 125,
-   "hotspotSitesSeen": 55
+   "day": "2026-11-02",
+   "detections": 4,
+   "hotspotSitesSeen": 3
   }
  }
 }
